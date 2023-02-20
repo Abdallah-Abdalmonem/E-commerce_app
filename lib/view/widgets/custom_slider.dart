@@ -2,11 +2,10 @@ import 'package:e_commerce/controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/constant/color.dart';
 import '../../data/datasource/static/static.dart';
 
-class CutomSliderOnboarding extends GetView<OnboardingControllerImp> {
-  const CutomSliderOnboarding({super.key});
+class CutomSliderOnBoarding extends GetView<OnboardingControllerImp> {
+  const CutomSliderOnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +21,7 @@ class CutomSliderOnboarding extends GetView<OnboardingControllerImp> {
           children: [
             Text(
               onBoardingList[index].title!,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+              style: Theme.of(context).textTheme.displayLarge,
             ),
             const SizedBox(height: 80),
             Image.asset(
@@ -38,11 +34,7 @@ class CutomSliderOnboarding extends GetView<OnboardingControllerImp> {
             Text(
               onBoardingList[index].body!,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                  height: 2,
-                  color: AppColor.grey,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ],
         );

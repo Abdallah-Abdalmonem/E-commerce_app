@@ -19,7 +19,7 @@ class OnBoarding extends StatelessWidget {
           children: [
             const Expanded(
               flex: 3,
-              child: CutomSliderOnboarding(),
+              child: CutomSliderOnBoarding(),
             ),
             Expanded(
               flex: 1,
@@ -29,7 +29,7 @@ class OnBoarding extends StatelessWidget {
                   Spacer(
                     flex: 2,
                   ),
-                  CustomButtonOnboarding(),
+                  CustomButtonOnBoarding(),
                   Spacer(
                     flex: 2,
                   ),
