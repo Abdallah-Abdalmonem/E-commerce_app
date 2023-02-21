@@ -2,9 +2,9 @@ import 'package:e_commerce/controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../data/datasource/static/static.dart';
+import '../../../data/datasource/static/static.dart';
 
-class CutomSliderOnBoarding extends GetView<OnboardingControllerImp> {
+class CutomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
   const CutomSliderOnBoarding({super.key});
 
   @override
@@ -19,18 +19,18 @@ class CutomSliderOnBoarding extends GetView<OnboardingControllerImp> {
       itemBuilder: (context, index) {
         return Column(
           children: [
+            Image.asset(
+              onBoardingList[index].image!,
+              fit: BoxFit.cover,
+              height: 350,
+              width: double.infinity,
+            ),
+            const SizedBox(height: 30),
             Text(
               onBoardingList[index].title!,
               style: Theme.of(context).textTheme.displayLarge,
             ),
-            const SizedBox(height: 80),
-            Image.asset(
-              onBoardingList[index].image!,
-              fit: BoxFit.cover,
-              height: 230,
-              width: 200,
-            ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 30),
             Text(
               onBoardingList[index].body!,
               textAlign: TextAlign.center,

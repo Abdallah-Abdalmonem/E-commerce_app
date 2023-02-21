@@ -2,15 +2,15 @@ import 'package:e_commerce/controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/constant/color.dart';
-import '../../data/datasource/static/static.dart';
+import '../../../core/constant/color.dart';
+import '../../../data/datasource/static/static.dart';
 
 class CustomDotControllerOnBoarding extends StatelessWidget {
   const CustomDotControllerOnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<OnboardingControllerImp>(
+    return GetBuilder<OnBoardingControllerImp>(
       builder: (controller) {
         return Row(
           mainAxisAlignment: MainAxisAlignment.center,

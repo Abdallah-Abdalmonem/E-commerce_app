@@ -8,7 +8,7 @@ abstract class OnboardingController extends GetxController {
   onPageChanged(int index);
 }
 
-class OnboardingControllerImp extends OnboardingController {
+class OnBoardingControllerImp extends OnboardingController {
   int currentPage = 0;
   PageController? pageController;
   @override

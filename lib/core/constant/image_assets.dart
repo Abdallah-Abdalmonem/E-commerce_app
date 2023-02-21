@@ -1,8 +1,8 @@
 class AppImageAsset {
   static const String rootImages = 'assets/images';
 
-  static const String onBoardingImageOne = '$rootImages/onboardingfour.png';
-  static const String onBoardingImageTwo = '$rootImages/onboardingone.png';
-  static const String onBoardingImageThree = '$rootImages/onboardingthree.png';
-  static const String onBoardingImageFour = '$rootImages/onboardingtwo.png';
+  static const String appIcon = '$rootImages/q1.jpg';
+  static const String onBoardingImageTwo = '$rootImages/q2.png';
+  static const String onBoardingImageThree = '$rootImages/q3.png';
+  static const String onBoardingImageFour = '$rootImages/q4.png';
 }
