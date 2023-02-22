@@ -1,8 +1,12 @@
 import 'package:e_commerce/core/constant/app_routes.dart';
+import 'package:e_commerce/core/localizat/chnage_local.dart';
 import 'package:e_commerce/core/localizat/translation.dart';
 import 'package:e_commerce/core/services/services.dart';
 import 'package:e_commerce/routes.dart';
+import 'package:e_commerce/view/screens/auth/login.dart';
+import 'package:e_commerce/view/screens/auth/signup.dart';
 import 'package:e_commerce/view/screens/language.dart';
+import 'package:e_commerce/view/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,10 +23,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    LocaleController controller = Get.put(LocaleController());
     return GetMaterialApp(
+      locale: controller.language,
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Ecommerce',
       theme: ThemeData(
         textTheme: const TextTheme(
           displayLarge: TextStyle(
@@ -41,7 +47,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // initialRoute: AppRoutes.onboarding,
-      home: Language(),
+      home: SignUp(),
       routes: routes,
     );
   }

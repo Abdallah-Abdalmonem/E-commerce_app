@@ -4,8 +4,12 @@ import 'package:get/get.dart';
 
 import '../../../core/constant/color.dart';
 
-class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
-  const CustomButtonOnBoarding({super.key});
+class CustomButtonAuth extends GetView<OnBoardingControllerImp> {
+  final String textButton;
+  final void Function() pressed;
+
+  const CustomButtonAuth(
+      {super.key, required this.textButton, required this.pressed});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +20,14 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
                   borderRadius: BorderRadius.circular(18.0))),
           backgroundColor: MaterialStateProperty.resolveWith(
               (states) => AppColor.primaryColor)),
-      onPressed: () {
-        controller.next();
-      },
+      onPressed: pressed,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
-        child: const Text(
-          'Continue',
-          style: TextStyle(color: AppColor.white, fontSize: 20),
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: Text(
+          textButton,
+          textAlign: TextAlign.center,
+          style: const TextStyle(color: AppColor.white, fontSize: 20),
         ),
       ),
     );
