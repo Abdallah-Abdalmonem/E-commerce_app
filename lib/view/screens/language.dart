@@ -1,5 +1,4 @@
 import 'package:e_commerce/core/constant/app_routes.dart';
-import 'package:e_commerce/core/constant/color.dart';
 import 'package:e_commerce/core/localizat/chnage_local.dart';
 import 'package:e_commerce/view/widgets/language/custom_button.dart';
 import 'package:flutter/material.dart';

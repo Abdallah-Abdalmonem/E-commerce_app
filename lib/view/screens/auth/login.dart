@@ -1,19 +1,18 @@
 import 'package:e_commerce/controller/auth/login_controller.dart';
 import 'package:e_commerce/core/constant/color.dart';
+import 'package:e_commerce/core/functions/valid_input.dart';
 import 'package:e_commerce/view/widgets/auth/custom_button_auth.dart';
-import 'package:e_commerce/view/widgets/onboarding/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constant/app_routes.dart';
 import '../../widgets/auth/custom_button_signin_signup.dart';
-import '../../widgets/auth/custom_text_Title_auth.dart';
+import '../../widgets/auth/custom_text_title_auth.dart';
 import '../../widgets/auth/custom_text_body_auth.dart';
-import '../../widgets/auth/custom_textfield_auth.dart';
+import '../../widgets/auth/custom_textformfield_auth.dart';
 import '../../widgets/auth/logo_auth.dart';
 
 class Login extends StatelessWidget {
-  Login({super.key});
+  const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class Login extends StatelessWidget {
           backgroundColor: AppColor.white,
           centerTitle: true,
           title: Text(
-            'Sign In',
+            '9'.tr,
             style: Theme.of(context)
                 .textTheme
                 .bodyLarge!
@@ -39,64 +38,80 @@ class Login extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(30.0),
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const LogoAuth(),
-                const CustomTextTitleAuth(title: 'Welcome Back'),
-                const CustomTextBodyAuth(
-                    textBody:
-                        'Sing in with your email and password \n or continue with social media'),
-                const SizedBox(
-                  height: 30,
-                ),
-                CustomTextFieldAuth(
-                    TextController: controller.emailTextController,
-                    labelText: 'Email',
-                    hintText: 'Enter your Email',
-                    suffixIcon: const Icon(Icons.email_outlined)),
-                const SizedBox(
-                  height: 30,
-                ),
-                CustomTextFieldAuth(
-                    TextController: controller.passwordTextController,
-                    labelText: 'Password',
-                    hintText: 'Enter your Password',
-                    suffixIcon: const Icon(Icons.lock_outline)),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    Checkbox(
-                        value: true,
-                        activeColor: AppColor.primaryColor,
-                        onChanged: (val) {}),
-                    const Text('Remember me'),
-                    const Spacer(),
-                    TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          'Forget Password',
+            child: Form(
+              key: controller.formKey,
+              child: Column(
+                children: [
+                  const LogoAuth(),
+                  CustomTextTitleAuth(title: '10'.tr),
+                  CustomTextBodyAuth(textBody: '11'.tr),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  CustomTextFormFieldAuth(
+                      valid: (value) {
+                        return validInput(value!, 5, 100, 'email');
+                      },
+                      paddingForLabelText: 10,
+                      textController: controller.emailTextController,
+                      labelText: '18'.tr,
+                      hintText: '12'.tr,
+                      suffixIcon: const Icon(Icons.email_outlined)),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  CustomTextFormFieldAuth(
+                      valid: (value) {
+                        return validInput(value!, 5, 30, 'password');
+                      },
+                      paddingForLabelText: 10,
+                      textController: controller.passwordTextController,
+                      labelText: '19'.tr,
+                      hintText: '13'.tr,
+                      suffixIcon: const Icon(Icons.lock_outline)),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Checkbox(
+                          value: true,
+                          activeColor: AppColor.primaryColor,
+                          onChanged: (val) {}),
+                      const Text('Remember me'),
+                      const Spacer(),
+                      TextButton(
+                        child: Text(
+                          '14'.tr,
                           style: TextStyle(
                               textBaseline: TextBaseline.alphabetic,
                               color: AppColor.primaryColor),
-                        )),
-                  ],
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                CustomButtonAuth(textButton: 'Sign in', pressed: () {}),
-                const SizedBox(
-                  height: 20,
-                ),
-                CustomButtonSignInOrSignUp(
-                    onPress: () {
-                      controller.goToSignUp();
-                    },
-                    textOne: 'Don\'t have an account ?',
-                    textTwo: 'Sign Up'),
-              ],
+                        ),
+                        onPressed: () {
+                          controller.goToForgetPassword();
+                        },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  CustomButtonAuth(
+                      textButton: '15'.tr,
+                      pressed: () {
+                        controller.login();
+                      }),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  CustomButtonSignInOrSignUp(
+                      onPress: () {
+                        controller.goToSignUp();
+                      },
+                      textOne: '16'.tr,
+                      textTwo: '17'.tr),
+                ],
+              ),
             ),
           ),
         ));

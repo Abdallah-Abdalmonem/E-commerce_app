@@ -3,6 +3,7 @@ import 'package:e_commerce/core/localizat/chnage_local.dart';
 import 'package:e_commerce/core/localizat/translation.dart';
 import 'package:e_commerce/core/services/services.dart';
 import 'package:e_commerce/routes.dart';
+import 'package:e_commerce/view/screens/auth/forget_password/forget_password.dart';
 import 'package:e_commerce/view/screens/auth/login.dart';
 import 'package:e_commerce/view/screens/auth/signup.dart';
 import 'package:e_commerce/view/screens/language.dart';
@@ -29,25 +30,9 @@ class MyApp extends StatelessWidget {
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Ecommerce',
-      theme: ThemeData(
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
-            fontFamily: 'PlayfairDisplay',
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            color: AppColor.black,
-          ),
-          bodyLarge: TextStyle(
-            height: 2,
-            color: AppColor.grey,
-            fontWeight: FontWeight.bold,
-            fontSize: 17,
-          ),
-        ),
-        primarySwatch: Colors.blue,
-      ),
+      theme: controller.appTheme,
       // initialRoute: AppRoutes.onboarding,
-      home: SignUp(),
+      home: Language(),
       routes: routes,
     );
   }

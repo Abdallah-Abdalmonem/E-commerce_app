@@ -1,23 +1,35 @@
 import 'package:e_commerce/core/constant/app_routes.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class LoginController extends GetxController {
   login();
   goToSignUp();
+  goToForgetPassword();
 }
 
 class LoginControllerImp extends LoginController {
   late TextEditingController emailTextController;
   late TextEditingController passwordTextController;
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
-  login() {}
+  login() {
+    if (formKey.currentState!.validate()) {
+      print('Valid');
+    } else {
+      print('Not Valid');
+    }
+  }
 
   @override
   goToSignUp() {
     Get.offNamed(AppRoutes.singup);
-    update();
+  }
+
+  @override
+  goToForgetPassword() {
+    Get.offNamed(AppRoutes.forgetPassword);
   }
 
   @override
