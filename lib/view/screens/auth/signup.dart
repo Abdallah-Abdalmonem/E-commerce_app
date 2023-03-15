@@ -38,13 +38,13 @@ class SignUp extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const CustomTextTitleAuth(title: 'Complete Prof'),
+                const CustomTextTitleAuth(title: 'Welcom SignUp Now'),
                 const SizedBox(
                   height: 10,
                 ),
                 const CustomTextBodyAuth(
                     textBody:
-                        'Complete your details or cont  \n with social media'),
+                        'Sing in with your email and password \n or continue with social media'),
                 const SizedBox(
                   height: 30,
                 ),
