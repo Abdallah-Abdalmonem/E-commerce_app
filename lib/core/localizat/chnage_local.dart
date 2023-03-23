@@ -2,7 +2,6 @@ import 'package:e_commerce/core/constant/app_theme.dart';
 import 'package:e_commerce/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 
 class LocaleController extends GetxController {
   Locale? language;

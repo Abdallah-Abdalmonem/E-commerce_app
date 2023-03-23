@@ -1,17 +1,10 @@
-import 'package:e_commerce/core/constant/app_routes.dart';
 import 'package:e_commerce/core/localizat/chnage_local.dart';
 import 'package:e_commerce/core/localizat/translation.dart';
 import 'package:e_commerce/core/services/services.dart';
 import 'package:e_commerce/routes.dart';
-import 'package:e_commerce/view/screens/auth/forget_password/forget_password.dart';
-import 'package:e_commerce/view/screens/auth/login.dart';
-import 'package:e_commerce/view/screens/auth/signup.dart';
 import 'package:e_commerce/view/screens/language.dart';
-import 'package:e_commerce/view/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'core/constant/color.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

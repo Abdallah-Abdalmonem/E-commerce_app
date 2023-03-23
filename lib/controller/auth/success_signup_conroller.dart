@@ -1,5 +1,4 @@
 import 'package:e_commerce/core/constant/app_routes.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class SuccessSignUpController extends GetxController {
