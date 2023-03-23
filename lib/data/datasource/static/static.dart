@@ -3,12 +3,6 @@ import 'package:e_commerce/data/model/onboarding_model.dart';
 import 'package:get/get.dart';
 
 List<OnBoardingModel> onBoardingList = [
-  // OnBoardingModel(
-  // id: 1,
-  // title: 'Choose Product',
-  // body:
-  //     'We Have a 100k Product, Chosse \n your Product From Our \n E-commerce Shop',
-  // image: AppImageAsset.onBoardingImageOne),
   OnBoardingModel(
       id: 2,
       title: '2'.tr,
