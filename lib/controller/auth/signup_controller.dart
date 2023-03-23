@@ -18,7 +18,8 @@ class SignUpontrollerImp extends SignUpController {
   @override
   signUp() {
     if (formKey.currentState!.validate()) {
-      Get.toNamed(AppRoutes.verfiyCodeSignUp);
+      Get.offNamed(AppRoutes.verfiyCodeSignUp);
+      Get.delete<SignUpontrollerImp>();
       print('Valid');
     } else {
       print('Not Valid');
