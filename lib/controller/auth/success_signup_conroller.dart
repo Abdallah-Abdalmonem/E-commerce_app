@@ -8,7 +8,7 @@ abstract class SuccessSignUpController extends GetxController {
 class SuccessSignUpontrollerImp extends SuccessSignUpController {
   @override
   goToLogin() {
-    Get.toNamed(AppRoutes.login);
+    Get.offNamed(AppRoutes.login);
   }
 
   @override

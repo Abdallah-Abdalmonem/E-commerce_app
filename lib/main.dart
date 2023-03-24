@@ -6,6 +6,8 @@ import 'package:e_commerce/view/screens/language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'binding.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initialServices();
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
       // initialRoute: AppRoutes.onboarding,
       home: Language(),
       routes: routes,
+      initialBinding: MyBinding(),
     );
   }
 }
