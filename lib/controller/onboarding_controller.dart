@@ -16,7 +16,7 @@ class OnBoardingControllerImp extends OnboardingController {
     // currentPage++;
 
     if (currentPage >= onBoardingList.length - 1) {
-      Get.toNamed(AppRoutes.login);
+      Get.offNamed(AppRoutes.login);
     }
 
     pageController!.nextPage(

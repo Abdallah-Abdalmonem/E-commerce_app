@@ -10,6 +10,9 @@ class CustomTextFormFieldAuth extends StatelessWidget {
   final TextEditingController textController;
   final String? Function(String?) valid;
   final TextInputType? keyboardType;
+  final bool? obscure;
+  final Function()? onTapSuffixIcon;
+
   const CustomTextFormFieldAuth({
     Key? key,
     this.keyboardType,
@@ -19,11 +22,14 @@ class CustomTextFormFieldAuth extends StatelessWidget {
     this.paddingForLabelText,
     required this.textController,
     required this.valid,
+    this.obscure,
+    this.onTapSuffixIcon,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscure ?? false,
       keyboardType: keyboardType,
       validator: valid,
       controller: textController,
@@ -36,7 +42,7 @@ class CustomTextFormFieldAuth extends StatelessWidget {
         ),
         // constraints: const BoxConstraints(maxHeight: 54),
         hintText: hintText,
-        suffixIcon: suffixIcon,
+        suffixIcon: InkWell(onTap: onTapSuffixIcon, child: suffixIcon),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         floatingLabelAlignment: FloatingLabelAlignment.start,
         suffixIconColor: AppColor.grey,
